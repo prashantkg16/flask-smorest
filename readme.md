@@ -42,3 +42,17 @@ Flask Rest API
 > RESTX -
 
 * Doesn't use marshmallow
+
+### git reset - "modes": soft, mixed, hard, merge and keep
+> SOFT - You will remove the last commit from the current branch
+
+git reset --soft HEAD~1
+> HARD - Lose all uncommited changes and all untracked files. changes will stay in your working tree. Also, the changes will stay on your index
+
+git reset --hard HEAD~1
+> MIXED - Default mode and quite similar to soft. keep the changes in your working tree but not on the index (use git add)
+
+git reset HEAD~1
+> KEEP - Aborts the reset if one or more of these files has uncommited changes. It basically acts as a safer version of hard
+
+git reset --keep HEAD~1
