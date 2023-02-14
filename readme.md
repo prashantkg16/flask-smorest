@@ -20,7 +20,7 @@ for Linux
 > run -dp 5000:5000 -w /app -v "$(pwd):/app" flask-smorest-api
 
 For window
-> 
+> docker run -dp 5000:5000 -w /app -v "/c/Documents/yourproject:/app" flask-smorest-api
 
 python-dotenv library: - load environment variables and use the .flaskenv file
 .flaskenv
