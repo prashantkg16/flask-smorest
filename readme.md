@@ -43,6 +43,9 @@ Flask Rest API
 
 * Doesn't use marshmallow
 
+### Smorest Blueprint is same as Flask Blueprint, only description is extra
+MethodView - These are classes where each method maps to one endpoint
+
 ### git reset - "modes": soft, mixed, hard, merge and keep
 > SOFT - You will remove the last commit from the current branch
 
