@@ -46,6 +46,16 @@ Flask Rest API
 ### Smorest Blueprint is same as Flask Blueprint, only description is extra
 MethodView - These are classes where each method maps to one endpoint
 
+Without lazy="dynamic", the items attribute of the StoreModel resolves to a list of ItemModel objects.
+With lazy="dynamic", the items attribute resolves to a SQLAlchemy query
+
+* A key benefit is load speed. Because SQLAlchemy doesn't have to go to the items table and load items, stores will load faster.
+> store.items.all()
+
+* A key drawback is accessing the items of a store isn't as easy. 
+However this has another hidden benefit, which is that when you do load items, you can do things like filtering before loading.
+> store.items.filter_by(name=="Chair").first()
+
 ### git reset - "modes": soft, mixed, hard, merge and keep
 > SOFT - You will remove the last commit from the current branch
 
