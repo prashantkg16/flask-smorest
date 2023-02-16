@@ -56,6 +56,8 @@ With lazy="dynamic", the items attribute resolves to a SQLAlchemy query
 However this has another hidden benefit, which is that when you do load items, you can do things like filtering before loading.
 > store.items.filter_by(name=="Chair").first()
 
+>  Flask-JWT-Extended that a refresh token is required with @jwt_required(refresh=True)
+
 ### git reset - "modes": soft, mixed, hard, merge and keep
 > SOFT - You will remove the last commit from the current branch
 
