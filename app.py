@@ -6,6 +6,7 @@ import os
 
 from resources.store import blp as store_blp
 from resources.item import blp as item_blp
+from resources.tag import blp as tag_blp
 
 def create_app(db_url=None):
     app = Flask(__name__)
@@ -22,15 +23,15 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app)
 
-    api = Api(app)
-
     with app.app_context():
         db.create_all()
 
+    api = Api(app)
     api.register_blueprint(store_blp)
     api.register_blueprint(item_blp)
-
+    api.register_blueprint(tag_blp)
     return app
+
 
 if __name__ == "__main__":
     create_app().run(host='0.0.0.0')
