@@ -43,7 +43,7 @@ Flask Rest API
 
 * Doesn't use marshmallow
 
-### Smorest Blueprint is same as Flask Blueprint, only description is extra
+#### Smorest Blueprint is same as Flask Blueprint, only description is extra
 MethodView - These are classes where each method maps to one endpoint
 
 Without lazy="dynamic", the items attribute of the StoreModel resolves to a list of ItemModel objects.
@@ -58,7 +58,18 @@ However this has another hidden benefit, which is that when you do load items, y
 
 >  Flask-JWT-Extended that a refresh token is required with @jwt_required(refresh=True)
 
-### git reset - "modes": soft, mixed, hard, merge and keep
+#### Alembic and Flask-Migrate
+changes directly to the models without module will make out of sync
+* Alembic to detect the changes to the models
+* tracks each of these migrations over time
+Initiate DB - This will create a migrations' folder inside your project folder
+* flask db init
+Migrate Command - create the migration file
+* flask db migrate
+upgrade Command - apply the changes
+* flask db upgrade
+
+#### git reset - "modes": soft, mixed, hard, merge and keep
 > SOFT - You will remove the last commit from the current branch
 
 git reset --soft HEAD~1
